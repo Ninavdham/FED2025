@@ -39,11 +39,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://www.artis.nl/nl
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+  Home
   <img src="readme-images/Artis_Home.jpg" width="375px" alt="De home pagina van de Artis website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  Plan je bezoek  
   <img src="readme-images/Artis_Planjebezoek.jpg" width="375px" alt="De pagina waar een bezoek naar Artis gepland kan worden">
  
 </details>
