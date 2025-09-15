@@ -17,6 +17,8 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+
+	color-scheme: (light, dark);
 }
 
 

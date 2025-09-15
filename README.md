@@ -57,6 +57,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  1. De koppen in de website van Artis zijn op goede volgorde, er worden geen koppen overgeslagen.
+  2. De links in de screen reader zijn logisch, met goede toelichting wat het duidelijk maakt wat het doel is van de link, waar het je brengt. Ook wordt er aangegeven als het een link is die al eerder bezocht is wordt dat ook benoemd door/in de voice over. 
+  3. Er wordt gebruik gemaakt van pixels.
+  4. Navigeren met het keyboard werkt niet en het komt dus niet overeen met de layout.
+  5. Voor buttons wordt een class gebruikt (onder andere)
+  6. De website van Artis heeft geen darkmode optie.
+  
 
 </details>
 
