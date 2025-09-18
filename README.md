@@ -105,7 +105,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | ---            | ---                | ---          | ---              |
   | De HTML structuur van de navigatie. | Welke elementen voor teksten.            | WCAG checklist   |     |
   |Start en eind van sections, plaats imgs.  |  |  | |
-  | ...            | ...                | ...          | ...              |
+  |             |                 |           |               |
 
 
   ### Verslag van meeting
