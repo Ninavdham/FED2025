@@ -101,10 +101,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Nina     | Lynn          | Beyza    | Zara        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | De HTML structuur van de navigatie. | Welke elementen voor teksten.            | WCAG checklist   |     |
+  |  | Start en eind van sections, plaats imgs. |  | |
   | ...            | ...                | ...          | ...              |
 
 
