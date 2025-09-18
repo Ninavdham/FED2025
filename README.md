@@ -104,7 +104,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | Nina     | Lynn          | Beyza    | Zara        |
   | ---            | ---                | ---          | ---              |
   | De HTML structuur van de navigatie. | Welke elementen voor teksten.            | WCAG checklist   |     |
-  |  | Start en eind van sections, plaats imgs. |  | |
+  |Start en eind van sections, plaats imgs.  |  |  | |
   | ...            | ...                | ...          | ...              |
 
 
