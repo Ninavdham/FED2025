@@ -111,10 +111,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Decoratieve foto's in css (background-image met url) backgorund-size: cover, background-position: center center
+  - Caroussel configurater (Adam Argyle)
+  - 2 navs in header
+  - @media (prefers-reduced-motion:no-preferences) display:none,inline
+  - image tussen sections
+  - hidden text; lees meer <span class="visually-hidden">
+  - inspecteren > vierkantjepijltje
+  - svg inspecteren svg copy element
 
 </details>
 
@@ -147,6 +151,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - punt 1
   - punt 2
   - nog een punt
+
+  
 - ...
 
 </details>

@@ -1,8 +1,14 @@
+/****************/
+/* ALGEMENE CSS */
+/****************/
+
 /**************/
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+	margin: 0.2em;
+	padding: 0;
+    box-sizing:border-box;  
 }
 
 
@@ -15,9 +21,11 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-
+	--donkergroen: #1e4d2b;   
+	--lichtgroen: #ffffff;
+	--kleur-tekst: #222222;
+	--spacing: 1rem;
+	--font-body: "Open Sans", Arial, sans-serif;
 	color-scheme: (light, dark);
 }
 
@@ -28,6 +36,159 @@
 /****************/
 /* JOUW STYLING */
 /****************/
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+  }
 
-/* jouw code */
+body{
+	font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--color-background);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: #fff;
+	padding: 0.5rem 1rem;
+	box-sizing: border-box;
+  }
+  
+  /* ----- bovenste rij ----- */
+  header > a:first-of-type {
+	/* ticketsknop links */
+	background: black;
+	width:fit-content;
+	color: white;
+	padding: 0.8rem 1.1rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-weight: 600;
+	order: 1;
+  }
+  
+  header > a:nth-of-type(2) img {
+	/* logo in het midden */
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	order: 2;
+  }
+  
+  header > div {
+	/* iconen rechts */
+	display: flex;
+	gap: 0.5rem;
+	order: 3;
+	margin-left: auto; 
+  }
+  
+  header > div button {
+	background: none;
+	border: none;
+	font-size: 1.4rem;
+	cursor: pointer;
+  }
+  
+  /* ----- onderste rij ----- */
+  header > nav {
+	order: 4;
+	margin-top: 0.5rem;
+  }
+  
+  header > nav ul {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  
+  header > nav a {
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+	padding: 0.3rem 0.8rem;
+	border-radius: 1rem;
+  }
+  
+  header > nav a:hover {
+	background: #f0f0f0;
+  }
+  
+  @media (min-width: 54em) {
+	header {
+	  flex-direction: row;             
+	  align-items: center;
+	  justify-content: space-between;
+	  padding: 1rem 3rem;
+	}
+  
+	/* Logo links */
+	header > a:nth-of-type(2) {
+	  order: 1;
+	  margin-right: 2rem;
+	}
+	header > a:nth-of-type(2) img {
+	  height: 50px;
+	  margin: 0;
+	}
+  
+	/* Tabs naast logo */
+	header > nav {
+	  order: 2;
+	  margin: 0 2rem;
+	}
+	header > nav ul {
+	  justify-content: center;
+	  gap: 2rem;
+	}
+  
+	/* Iconen rechts naast tabs */
+	header > div {
+	  order: 3;
+	  margin-left: auto;              
+	}
+  
+	/* Tickets-knop helemaal rechts */
+	header > a:first-of-type {
+	  order: 4;
+	  margin-left: 1rem;
+	}
+  }
+
+
+
+/* FOOTER */
+footer {
+	background-color: #333;
+	color: #eee;
+	padding: 2rem 1rem;
+  }
+  footer .footer-cols {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+  }
+  footer a {
+	color: #eee;
+	text-decoration: none;
+  }
+
+
+
+
+
+
+
+
 
