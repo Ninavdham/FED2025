@@ -1,3 +1,188 @@
 /*********************/
 /* CSS PLAN JE BEZOEK*/
 /*********************/
+
+/* main navigatie */
+main section:nth-of-type(1){
+display: flex;
+flex-direction: column;
+}
+
+main section:nth-of-type(1) section:nth-of-type(1){
+    background-color: #001e07;
+    color: #c5e3be;
+    justify-content: center;
+    padding: 2.5em;
+    padding-bottom: 4.5em;
+    border-radius: 2em;
+    list-style: none;
+}
+
+section:nth-of-type(1) section:nth-of-type(1) li  {
+    font-size: 1.2em;
+    color: #c5e3be;
+    text-decoration: none;
+    padding-top: 1.5em;
+    list-style: none;
+    padding-top: 1.5em;
+}
+
+section:nth-of-type(1) section:nth-of-type(1) a{
+    color: #c5e3be;
+}
+
+section:nth-of-type(1) section:nth-of-type(2) img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ticketprijzen & openingstijden */
+section:nth-of-type(2) h2{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+section:nth-of-type(2) select{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* tabel tickets */
+table {
+    border-collapse: collapse;
+    border: none;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  
+  th,
+  td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+  }
+  
+  th:first-of-type{
+      text-align: left;
+  }
+
+  td:last-of-type {
+    text-align: left;
+  }
+  
+  tfoot th {
+    text-align: right;
+  }
+  
+  tfoot td {
+    text-align: left;
+  }
+  
+/* koop je ticket knop */
+section:nth-of-type(3) a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 10em;
+    width: auto;
+}
+
+section:nth-of-type(4){
+    margin-top: 4em;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+
+/* section route & parkeren" */
+section:nth-of-type(5){
+    display: flex;
+    flex-direction: column;
+    background-color: #001e07 ;
+    border-radius: 10%;
+    padding: 1em;
+    color: #c5e3be;
+}
+
+section:nth-of-type(5) img{
+    width: auto;
+    order: 1;
+    border-radius: 10%;
+}
+
+section:nth-of-type(5) h2{
+    order:2;
+}
+
+section:nth-of-type(5) p{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    order:3;
+}
+
+section:nth-of-type(5) a{
+    order:4;
+    color:#c5e3be;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* section hoe druk...bezoek? */
+section:nth-of-type(6){
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+section:nth-of-type(6) p{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+section:nth-of-type(6) a{
+    color: black;
+    text-decoration: none;
+    margin-bottom: 4em;
+}
+
+
+
+
+
+/* section eten & drinken" */
+section:nth-of-type(7){
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0ec ;
+    border-radius: 10%;
+    padding: 1em;
+    color: black;
+}
+
+section:nth-of-type(7) img{
+    width: auto;
+    order: 1;
+    border-radius: 10%;
+}
+
+section:nth-of-type(7) h2{
+    order:2;
+}
+
+section:nth-of-type(7) p{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    order:3;
+}
+
+section:nth-of-type(7) a{
+    order:4;
+    color:black;
+    text-decoration: none;
+}

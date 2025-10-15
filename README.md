@@ -140,20 +140,43 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   | Nina      | Lynn          | Beyza    | Zara        |
   | ---            | ---                | ---          | ---              |
-  | css structuur sections  | en dit             | en ik dit    | Positioneren met css    |
-  | | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | css structuur sections  | Animatie van menu             | en ik dit    | Positioneren met css    |
+  | |  |  |  |
+  |             |                |           |               |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Figure tag voor foto's
+  - H1 in eerste sectie
+  - Alvast tweede pagina maken
+  - alt toevoegen aan foto's
+  - elke section heeft een heading
 
-  
-- ...
+  Button, links en co vormgeving
+  a (links)
+- Underline offset
+- outline: none 
+- cursor: pointer
+
+  Button
+- appearance none
+- font: inherit
+- active; translate: 
+
+svg kleur
+fill: 'color'
+
+image invert
+filter:invert
+
+filter:brightness 0
+
+image verandering
+content: url
+ 
+
 
 </details>
 
@@ -242,8 +265,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. bron gebruikt voor tabel tweede pagina https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table
+  2. bron gebruikt voor formulier in footer https://www.w3schools.com/css/tryit.asp?filename=trycss_forms
   3. ...
 
 </details>

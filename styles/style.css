@@ -6,14 +6,10 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-	margin: 0.2em;
+	margin: 0.1em;
 	padding: 0;
     box-sizing:border-box;  
 }
-
-
-
-
 
 
 /*********************/
@@ -28,8 +24,6 @@
 	--font-body: "Open Sans", Arial, sans-serif;
 	color-scheme: (light, dark);
 }
-
-
 
 
 
@@ -67,7 +61,7 @@ header {
 	background: black;
 	width:fit-content;
 	color: white;
-	padding: 0.8rem 1.1rem;
+	padding: 1rem 1rem;
 	border-radius: 2rem;
 	text-decoration: none;
 	font-weight: 600;
@@ -76,21 +70,22 @@ header {
   
   header > a:nth-of-type(2) img {
 	/* logo in het midden */
-	height: 40px;
+	height: 50px;
 	display: block;
 	margin: 0 auto;
 	order: 2;
   }
   
-  header > div {
+  header > section:nth-of-type(1) {
 	/* iconen rechts */
 	display: flex;
+	flex-direction: row;
 	gap: 0.5rem;
 	order: 3;
 	margin-left: auto; 
   }
   
-  header > div button {
+  header > section button {
 	background: none;
 	border: none;
 	font-size: 1.4rem;
@@ -117,7 +112,7 @@ header {
   }
 
   header > nav ul li{
-	  padding: 1rem;
+    padding: 1rem;
 
   }
 
@@ -182,11 +177,10 @@ header > nav ul li:nth-of-type(3){
 	}
 	header > nav ul {
 	  justify-content: center;
-	  gap: 2rem;
 	}
   
 	/* Iconen rechts naast tabs */
-	header > div {
+	header > section {
 	  order: 3;
 	  margin-left: auto;              
 	}
@@ -204,6 +198,30 @@ header > nav ul li:nth-of-type(3){
 
 
 /* FOOTER */
+
+footer form {
+	margin: auto;
+}
+
+/*footer input, select{
+	width: 100%;
+	padding: 1em;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	border: 0.5em solid #ccc;
+	box-sizing: border-box;
+}
+
+footer input[type="submit"]{
+	border: none;
+	cursor: pointer;
+	padding: 1em;
+}
+
+footer input[type="submit"]:hover{
+	background-color: #005bb5;
+}*/
+
 footer {
 	background-color: #333;
 	color: #eee;
