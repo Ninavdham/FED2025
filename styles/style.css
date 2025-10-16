@@ -5,205 +5,202 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-	margin: 0.1em;
-	padding: 0;
-    box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  margin: 0.1em;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--donkergroen: #1e4d2b;   
-	--lichtgroen: #ffffff;
-	--kleur-tekst: #222222;
-	--spacing: 1rem;
-	--font-body: "Open Sans", Arial, sans-serif;
-	color-scheme: (light, dark);
+  /* startje */
+  --donkergroen: #1e4d2b;
+  --lichtgroen: #ffffff;
+  --kleur-tekst: #222222;
+  --spacing: 1rem;
+  --font-body: "Open Sans", Arial, sans-serif;
+  color-scheme: (light, dark);
 }
-
-
 
 /****************/
 /* JOUW STYLING */
 /****************/
 .visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-  }
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-body{
-	font-family: 'Open Sans', sans-serif;
-    color: var(--text-color);
-    background-color: var(--color-background);
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+  background-color: var(--color-background);
 }
 
 header {
-	display: grid;
-	grid-template-columns: 1fr max-content 1fr;
-	width: 100%;
-	background: #fff;
-	padding: 0.5rem 1rem;
-	box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  width: 100%;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+}
+
+header > a:first-of-type {
+  background: black;
+  width: fit-content;
+  color: white;
+  padding: 1rem 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  order: -1;
+}
+
+header > a:nth-of-type(2) img {
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  order: 2;
+}
+
+header > section:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  order: 3;
+  margin-left: auto;
+}
+
+header > section button {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+header > nav {
+  order: 4;
+  margin-top: 0.5rem;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+header > nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.05em;
+}
+
+header > nav ul li {
+  padding: 1rem;
+}
+
+header > nav ul li:nth-of-type(1) {
+  background-color: #f0f0ec;
+  border-bottom-left-radius: 2em;
+  border-top-left-radius: 2em;
+}
+
+header > nav ul li:nth-of-type(2) {
+  background-color: #f0f0ec;
+  width: max-content;
+  text-align: center;
+}
+
+header > nav ul li:nth-of-type(3) {
+  background-color: #f0f0ec;
+  border-bottom-right-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+header > nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+}
+
+header > nav a:hover {
+  background: #f0f0f0;
+}
+
+@media (min-width: 54em) {
+  header {
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 1rem 3rem;
   }
-  
-  /* ----- bovenste rij ----- */
-  header > a:first-of-type {
-	/* ticketsknop links */
-	background: black;
-	width:fit-content;
-	color: white;
-	padding: 1rem 1rem;
-	border-radius: 2rem;
-	text-decoration: none;
-	font-weight: 600;
-	order: -1;
+
+
+  header > a:nth-of-type(2) {
+    grid-row-start: 1;
+    grid-column-end: 2;
+    order: 1;
+    margin-right: 2rem;
   }
-  
+
   header > a:nth-of-type(2) img {
-	/* logo in het midden */
-	height: 50px;
-	display: block;
-	margin: 0 auto;
-	order: 2;
+    height: 50px;
+    margin: 0;
   }
-  
-  header > section:nth-of-type(1) {
-	/* iconen rechts */
-	display: flex;
-	flex-direction: row;
-	gap: 0.5rem;
-	order: 3;
-	margin-left: auto; 
-  }
-  
-  header > section button {
-	background: none;
-	border: none;
-	font-size: 1.4rem;
-	cursor: pointer;
-  }
-  
-  /* ----- onderste rij ----- */
+
   header > nav {
-	order: 4;
-	margin-top: 0.5rem;
-	grid-column-start: 1;
-    grid-column-end: 4;
- }
-  
-  
+    order: 2;
+    margin: 0 2rem;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
   header > nav ul {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	gap: 0.05em;
+    justify-content: center;
   }
 
-  header > nav ul li{
-    padding: 1rem;
-
+  header > section {
+    order: 3;
+    margin-left: auto;
   }
 
-  header > nav ul li:nth-of-type(1){
-	  background-color: #f0f0ec;
-	  border-bottom-left-radius: 2em;
-	  border-top-left-radius: 2em;
+  header > a:first-of-type {
+    order: 4;
+    margin-left: 1rem;
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-column-end: 5;
   }
+}
 
-  header > nav ul li:nth-of-type(2){
-	background-color: #f0f0ec;
-	width: max-content;
-	text-align: center;
-  }
 
-header > nav ul li:nth-of-type(3){
-	background-color: #f0f0ec;
-	border-bottom-right-radius: 2em;
-    border-top-right-radius: 2em;
-  }
 
-  
-  
-  header > nav a {
-	text-decoration: none;
-	color: black;
-	font-weight: 500;
-	padding: 0.3rem 0.8rem;
-	border-radius: 1rem;
-  }
-  
-  header > nav a:hover {
-	background: #f0f0f0;
-  }
-  
-  @media (min-width: 54em) {
-	header {
-	  display: grid;
-	  grid-template-rows: 1fr;
-	  padding: 1rem 3rem;
-	}
-  
-	/* Logo links */
-	header > a:nth-of-type(2) {
-	  grid-row-start: 1;
-      grid-column-end: 2;
-	  order: 1;
-	  margin-right: 2rem;
-	}
-	header > a:nth-of-type(2) img {
-	  height: 50px;
-	  margin: 0;
-	}
-  
-	/* Tabs naast logo */
-	header > nav {
-	  order: 2;
-	  margin: 0 2rem;
-	  grid-row-start: 1;
-	  grid-column-start: 2;
-      grid-column-end: 3;
-	}
-	header > nav ul {
-	  justify-content: center;
-	}
-  
-	/* Iconen rechts naast tabs */
-	header > section {
-	  order: 3;
-	  margin-left: auto;              
-	}
-  
-	/* Tickets-knop helemaal rechts */
-	header > a:first-of-type {
-	  order: 4;
-	  margin-left: 1rem;
-	  grid-row-start: 1;
-      grid-column-start: 4;
-      grid-column-end: 5;
-	}
-  }
+
+
+
+
+
 
 
 
 /* FOOTER */
 
 footer form {
-	margin: auto;
+  margin: auto;
+  color: black;
 }
 
-/*footer input, select{
+footer input, select{
 	width: 100%;
 	padding: 1em;
 	margin-top: 0.5em;
@@ -218,30 +215,15 @@ footer input[type="submit"]{
 	padding: 1em;
 }
 
-footer input[type="submit"]:hover{
-	background-color: #005bb5;
-}*/
 
 footer {
-	background-color: #333;
-	color: #eee;
-	padding: 2rem 1rem;
-  }
-  footer .footer-cols {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 1.5rem;
-  }
-  footer a {
-	color: #eee;
-	text-decoration: none;
-  }
-
-
-
-
-
-
-
-
-
+  padding: 2rem 1rem;
+}
+footer .footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+footer a {
+  text-decoration: none;
+}
