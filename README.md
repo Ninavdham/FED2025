@@ -220,8 +220,8 @@ content: url
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - flex-shrink:0; niet krimpen. parent scroll-snap-type:, child scroll-snap-align 
+  - font:inherit; border-bottom: solid 1px currentcolor;
   - nog een punt
   - ...
 

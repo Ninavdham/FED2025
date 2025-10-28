@@ -4,14 +4,15 @@
 
 /* main navigatie */
 main section:nth-of-type(1){
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin: .5rem;
 }
 
 main section:nth-of-type(1) section:nth-of-type(1){
     background-color: #001e07;
     color: #c5e3be;
-    justify-content: center;
     padding: 2.5em;
     padding-bottom: 4.5em;
     border-radius: 2em;
@@ -29,13 +30,40 @@ section:nth-of-type(1) section:nth-of-type(1) li  {
 
 section:nth-of-type(1) section:nth-of-type(1) a{
     color: #c5e3be;
+    text-decoration: none;
 }
 
 section:nth-of-type(1) section:nth-of-type(2) img{
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 2em;
 }
+
+section:nth-of-type(1) section:nth-of-type(1) li svg  {
+    vertical-align: middle;
+  }
+
+  @media (min-width: 64em) {
+    main section:nth-of-type(1) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  
+    main section:nth-of-type(1) section:nth-of-type(1) {
+      display: flex;
+      flex-direction: column;
+    }
+  }  
+
+
+
+
+
+
+
+
 
 /* ticketprijzen & openingstijden */
 section:nth-of-type(2) h2{
@@ -48,7 +76,12 @@ section:nth-of-type(2) select{
     margin-bottom: 2em;
 }
 
-/* tabel tickets */
+
+
+
+
+
+/* tabel ticketprijzen */
 table {
     border-collapse: collapse;
     border: none;
@@ -96,6 +129,13 @@ section:nth-of-type(4){
     margin-bottom: 2em;
     font-size: 1.5em;
 }
+
+
+
+
+
+
+
 
 /* section route & parkeren" */
 section:nth-of-type(5){

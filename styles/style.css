@@ -2,13 +2,21 @@
 /* ALGEMENE CSS */
 /****************/
 
+@font-face {
+  font-family: "Omnes";
+  src: url("../fonts/Omnes-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /**************/
 /* CSS REMEDY */
 /**************/
 *,
 *::after,
 *::before {
-  margin: 0.1em;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -22,7 +30,7 @@
   --lichtgroen: #ffffff;
   --kleur-tekst: #222222;
   --spacing: 1rem;
-  --font-body: "Open Sans", Arial, sans-serif;
+  --font-body: "Omnes", sans-serif; /* Vervangen door Omnes medium */
   color-scheme: (light, dark);
 }
 
@@ -40,10 +48,13 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  color: var(--text-color);
-  background-color: var(--color-background);
+  font-family: "Omnes", sans-serif;
+  color: var(--kleur-tekst);
 }
+
+
+
+/* HEADER */
 
 header {
   display: grid;
@@ -101,11 +112,12 @@ header > nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0.05em;
+  gap: 0.5em;
 }
 
 header > nav ul li {
   padding: 1rem;
+  gap: 1em;
 }
 
 header > nav ul li:nth-of-type(1) {
@@ -194,20 +206,85 @@ header > nav a:hover {
 
 
 /* FOOTER */
+footer {
+  padding: 2rem 1rem;
+}
 
+/* Formulier */
 footer form {
-  margin: auto;
+  margin: 0 auto;
+  max-width: 44em;
   color: black;
 }
 
-footer input, select{
-	width: 100%;
-	padding: 1em;
-	margin-top: 0.5em;
-	margin-bottom: 1em;
-	border: 0.5em solid #ccc;
-	box-sizing: border-box;
+form h2{
+  font-size: clamp(1.75rem, 2.2vw + 1rem, 3rem);
+  line-height: 1.1;
+  margin: 0 0 2.25rem;
 }
+
+footer form label {
+  display: block;
+  font-size: 0.95rem;
+  color: #6b6b6b;
+  text-transform: lowercase;
+  letter-spacing: 0.2px;
+  margin-bottom: 0.4rem;
+}
+
+footer input[type="text"],
+footer input[type="email"],
+footer select {
+  width: 100%;
+  padding: 0.9rem 0;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  outline: none;
+  font: inherit;
+}
+
+footer select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>")
+    no-repeat right 0 top 55%;
+  padding-right: 2rem; /* ruimte voor pijltje */
+}
+
+footer input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+}
+
+footer label[for="privacy"] {
+  display: inline;
+  color: inherit;
+}
+
+footer form p {
+  font-size: 0.95rem;
+  color: #4b4b4b;
+  line-height: 1.45;
+  margin-top: 0.5rem;
+}
+
+footer form p a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+footer input:focus,
+footer select:focus {
+  border-bottom-color: #000;
+}
+
 
 footer input[type="submit"]{
 	border: none;
@@ -215,15 +292,101 @@ footer input[type="submit"]{
 	padding: 1em;
 }
 
-
-footer {
-  padding: 2rem 1rem;
-}
 footer .footer-cols {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
+
+
+/* Footer Navigatie */
+
+footer nav {
+  display: grid;
+  gap: 1.25rem;
+  background-color: #001e07;
+  color: #c5e3be;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-radius: 2em;
+}
+
+footer section h2{
+  font-size: 4em;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+footer nav details > ul {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer nav details[open] > ul {
+  display: block;
+}
+
+footer nav summary{
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: .5rem 0;
+}
+
+footer nav summary::-webkit-details-marker { 
+  display: none; 
+}
+
+footer nav summary::after {
+  content: "▾";
+  float: right;
+  transform: rotate(-90deg);
+  transition: transform .2s;
+}
+
+footer nav details[open] > summary::after {
+  transform: rotate(0deg);
+}
+
+footer img {
+  border-radius: 1rem;
+}
+
+footer ul li a {
+  color: #c5e3be;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer section li {
+  list-style: none;
+  text-decoration: none;
+}
+
+footer section a {
+  color: #c5e3be;
+}
 footer a {
   text-decoration: none;
 }
+
+@media (min-width: 64em) {
+  footer nav { 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  }
+  footer nav details > ul { 
+    display: block; 
+  }
+  footer nav summary { 
+    pointer-events: none; 
+    cursor: default; 
+    margin-bottom: .5rem; 
+  }
+
+  footer nav summary::after { 
+    content: ""; 
+  }            
+ }
+
