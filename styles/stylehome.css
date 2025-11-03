@@ -2,8 +2,110 @@
 /* CSS HOME PAGINA*/
 /******************/
 
-/* main navigatie */
+/* ===== hero / hoofd-navigatie ===== */
+
+/* buitenste sectie met groen + foto */
 section:nth-of-type(1) {
+  display: grid;
+  gap: 1rem;
+  margin: .5rem;
+}
+
+section:nth-of-type(1) > h1[aria-label],
+section:nth-of-type(1) > section > h2[aria-label] {
+  display: none;
+}
+
+
+/* het groene blok (eerste section erin) */
+section:nth-of-type(1) > section:nth-of-type(1) {
+  background-color: #001e07;
+  color: #c5e3be;
+  padding: 2.5rem 2.75rem 3rem 2.75rem;
+  border-radius: 2rem;
+}
+
+/* grote titel */
+section:nth-of-type(1) > section:nth-of-type(1) > h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* lijst zelf: kolom, geen gaps (want we doen borders) */
+section:nth-of-type(1) > section:nth-of-type(1) nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* elk li = één rij: icoon - tekst - pijltje */
+section:nth-of-type(1) > section:nth-of-type(1) nav li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid rgba(197, 227, 190, .1);
+}
+
+/* link binnen li: tekst + eerste icoon op 1 lijn */
+section:nth-of-type(1) > section:nth-of-type(1) nav li > a {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  color: #c5e3be;
+  text-decoration: none;
+  flex: 1 1 auto;              /* zodat de pijltjes rechts kunnen staan */
+}
+
+/* eerste svg (icoon) mag niet uitrekken */
+section:nth-of-type(1) > section:nth-of-type(1) nav li > a svg:first-of-type {
+  flex: 0 0 auto;
+}
+
+/* het pijltje helemaal rechts (tweede svg, buiten de <a>) */
+section:nth-of-type(1) > section:nth-of-type(1) nav li svg:last-of-type {
+  flex: 0 0 auto;
+}
+
+/* IMAGE / VIDEO rechts */
+section:nth-of-type(1) > section:nth-of-type(2) img {
+  width: 100%;
+  display: block;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+/* ===== groot scherm ===== */
+@media (min-width: 70em) {
+  /* 2 kolommen naast elkaar, geen space-evenly meer */
+  section:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  /* groene blok mag volle hoogte pakken */
+  section:nth-of-type(1) > section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* foto even hoog als groen blok */
+  section:nth-of-type(1) > section:nth-of-type(2) img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+/* main navigatie */
+/*section:nth-of-type(1) {
   display: flex;
   flex-direction: column;
   gap: .8rem;
@@ -68,7 +170,7 @@ main section nav ul a {
     display: flex;
     flex-direction: column;
   }
-}
+}*/
 
 
 
@@ -77,9 +179,8 @@ main section nav ul a {
 section:nth-of-type(2) ul:nth-of-type(1) {
   display: flex;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 1rem;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 
 }
@@ -102,10 +203,13 @@ section:nth-of-type(2) h2 {
   order: 2;
   margin: .25rem 0 .5rem 0;
   text-transform: uppercase;
-  font-size: clamp(1.6rem, 4.2vw, 2.6rem);
-  line-height: 1.05;
+  font-size: 2.5em;
+  line-height: .8;
   letter-spacing: .02em;
-  font-weight: 700;          
+  font-weight: 500; 
+  max-width: 5em;    
+  color: white;
+  -webkit-text-stroke: 2px black;     
 }
 
 section:nth-of-type(2) p {
@@ -123,6 +227,7 @@ section:nth-of-type(2) li {
   scroll-snap-align: start;
   flex-shrink: 0;
   width: clamp(22rem, 70vw, 40rem);
+  max-width: 27em;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -162,14 +267,35 @@ section ul:nth-of-type(3) {
   flex-direction: column;
 }
 
+
+
+/* hier, in het hart van Amsterdam...*/
 section:nth-of-type(3){
-    margin-top: 2em;
-    margin-bottom: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+section:nth-of-type(3) h2{
+  font-size: 2.5em;
+  font-weight: 50;
+  margin-bottom: 1.8em;
+  max-width: 13em;
+}
+
+section:nth-of-type(3) h3{
+  font-size: 1.5em;
+  font-weight: 50;
+  margin-bottom: 1.6em;
+  max-width: 20em;
 }
 
 section:nth-of-type(3) p{
-    margin-top: 2em;
-    margin-bottom: 2em;
+  font-size: 1.1em;
+  font-weight: lighter;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  max-width: 28em;
 }
 
 section:nth-of-type(3) a{
@@ -179,6 +305,11 @@ section:nth-of-type(3) a{
 }
 
 
+@media (min-width: 54em){
+  section:nth-of-type(3) h2{
+    font-size: 3.5;
+  }
+}
 
 
 
@@ -236,6 +367,48 @@ section:nth-of-type(4) a {
   order: 4;
   color: black;
   text-decoration: none;
+}
+
+@media (min-width: 64em) {
+
+  section:nth-of-type(4){
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    /* border-radius: 2.5rem; */
+  }
+
+  section:nth-of-type(4) h2, section:nth-of-type(4) p, section:nth-of-type(4) a {
+    grid-column: 1;
+    order: 0;
+  }
+
+  section:nth-of-type(4) > h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  section:nth-of-type(4) > p {
+    margin-bottom: 1rem;
+  }
+
+  section:nth-of-type(4) > h2,
+  section:nth-of-type(4) > p,
+  section:nth-of-type(4) > a {
+    align-self: start; 
+    margin: 0;
+  }
+
+  section:nth-of-type(4) img {
+    order: 0;
+    grid-column: 2;
+    grid-row: 1 / -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
 }
 
 
@@ -307,12 +480,55 @@ main section:nth-of-type(5) ul:nth-of-type(1) {
   flex-direction: column;
 }
 
+@media (min-width: 64em) {
+
+  section:nth-of-type(5){
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    /* border-radius: 2.5rem; */
+  }
+
+  section:nth-of-type(5) h2, section:nth-of-type(4) p, section:nth-of-type(4) a {
+    grid-column: 1;
+    order: 0;
+  }
+
+  section:nth-of-type(5) > h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  section:nth-of-type(5) > p {
+    margin-bottom: 1rem;
+  }
+
+  section:nth-of-type(5) > h2,
+  section:nth-of-type(5) > p,
+  section:nth-of-type(5) > a {
+    align-self: start; 
+    margin: 0;
+  }
+
+  section:nth-of-type(5) img {
+    order: 0;
+    grid-column: 2;
+    grid-row: 1 / -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+}
+
 figure img {
   width: 100%;
   border-radius: 2em;
   margin: .5em;
 }
 
+/* Aantallen */
 section:nth-of-type(6) ul {
   display: flex;
   flex-direction: column;
@@ -339,7 +555,7 @@ section:nth-of-type(6) h3 {
 
   section:nth-of-type(6) h3 {
     font-size: 6em;
-    font-weight: lighter;
+    font-weight:200;
   }
 
   section:nth-of-type(6) p {

@@ -25,13 +25,21 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-  /* startje */
-  --donkergroen: #1e4d2b;
-  --lichtgroen: #ffffff;
-  --kleur-tekst: #222222;
+  color: #000000;
+  background-color: #ffffff;
+  /* --donkergroen: #1e4d2b; */
+  /* --lichtgroen: #c5e3be; */
+  /* --kleur-tekst: #222222; */
+  /* --achtergrond: #fff; */
   --spacing: 1rem;
-  --font-body: "Omnes", sans-serif; /* Vervangen door Omnes medium */
-  color-scheme: (light, dark);
+  --font-body: "Omnes", sans-serif; 
+  color-scheme: light;
+}
+
+:root[data-theme="dark"]{
+  color: #ffffff;
+  background-color: #0f3520;
+  color-scheme: dark;
 }
 
 /****************/
@@ -50,6 +58,7 @@
 body {
   font-family: "Omnes", sans-serif;
   color: var(--kleur-tekst);
+  background: var(--achtergrond);
 }
 
 
@@ -60,7 +69,6 @@ header {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   width: 100%;
-  background: #fff;
   padding: 0.5rem 1rem;
   box-sizing: border-box;
 }
@@ -210,7 +218,7 @@ footer {
   padding: 2rem 1rem;
 }
 
-/* Formulier */
+/* Formulier Hulpbron ChatGPT en Sanne (3de voortgangsgesprek)*/
 footer form {
   margin: 0 auto;
   max-width: 44em;
@@ -229,7 +237,6 @@ footer form label {
   color: #6b6b6b;
   text-transform: lowercase;
   letter-spacing: 0.2px;
-  margin-bottom: 0.4rem;
 }
 
 footer input[type="text"],
@@ -253,7 +260,7 @@ footer select {
   background:
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>")
     no-repeat right 0 top 55%;
-  padding-right: 2rem; /* ruimte voor pijltje */
+  padding-right: 2rem; 
 }
 
 footer input[type="checkbox"] {
@@ -298,10 +305,153 @@ footer .footer-cols {
   gap: 1.5rem;
 }
 
+/* ===== Footer navigatie zonder classes ===== */
 
-/* Footer Navigatie */
+/* dit is de wrapper van het groene blok + de foto */
+footer > section:last-of-type {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
 
-footer nav {
+footer > section:last-of-type > h2[aria-label] {
+  display: none;
+}
+
+
+/* dit is het groene blok (de binnenste section) */
+footer > section:last-of-type > section {
+  background-color: #001e07;
+  color: #c5e3be;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+/* titel in het groene blok */
+footer > section:last-of-type > section > h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+/* tekst onder de titel */
+footer > section:last-of-type > section > p {
+  max-width: 32rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* "koop je ticket" */
+footer > section:last-of-type > section > a {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #c5e3be;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ---- accordion mobile ---- */
+footer > section:last-of-type nav details > ul {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer > section:last-of-type nav details[open] > ul {
+  display: block;
+}
+
+footer > section:last-of-type nav summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: .5rem 0;
+}
+
+footer > section:last-of-type nav summary::-webkit-details-marker {
+  display: none;
+}
+
+footer > section:last-of-type nav summary::after {
+  content: "▾";
+  float: right;
+  transition: transform .2s;
+}
+
+footer > section:last-of-type nav details[open] > summary::after {
+  transform: rotate(0deg);
+}
+
+footer > section:last-of-type nav a {
+  color: #c5e3be;
+  text-decoration: none;
+  font-size: .85rem;
+}
+
+/* de foto rechts */
+footer > section:last-of-type > img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== groot scherm ===== */
+@media (min-width: 64em) {
+  /* 2 kolommen: links groen, rechts foto */
+  footer > section:last-of-type {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  footer > section:last-of-type > section {
+    height: 100%;
+    padding: 3rem 3.25rem 3rem 3rem;
+    border-radius: 2rem;
+  }
+
+
+  /* nav in 3 kolommen */
+  footer > section:last-of-type > section nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  /* accordion-uitklap uit */
+  footer > section:last-of-type nav details > ul {
+    display: block;
+  }
+  footer > section:last-of-type nav summary {
+    cursor: default;
+    margin-bottom: .5rem;
+  }
+  footer > section:last-of-type nav summary::after {
+    content: "";
+  }
+
+  /* foto even hoog/meer afgerond */
+  footer > section:last-of-type > img {
+    border-radius: 1.5rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+
+
+
+
+
+/* Footer Navigatie Hulpbron ChatGPT */
+/*footer section nav {
   display: grid;
   gap: 1.25rem;
   background-color: #001e07;
@@ -318,8 +468,8 @@ footer section h2{
 }
 
 footer nav details > ul {
-  display: none;
-  margin: 0;
+  display: none; 
+  margin: 0; 
   padding: 0;
   list-style: none;
 }
@@ -329,20 +479,19 @@ footer nav details[open] > ul {
 }
 
 footer nav summary{
-  list-style: none;
+  list-style: none; 
   cursor: pointer;
   font-weight: 600;
   padding: .5rem 0;
 }
 
-footer nav summary::-webkit-details-marker { 
+footer nav summary::-webkit-details-marker{ 
   display: none; 
 }
 
 footer nav summary::after {
   content: "▾";
   float: right;
-  transform: rotate(-90deg);
   transition: transform .2s;
 }
 
@@ -363,11 +512,14 @@ footer ul li a {
 footer section li {
   list-style: none;
   text-decoration: none;
+  font-size: 1em;
 }
 
 footer section a {
   color: #c5e3be;
+  font-size: .8em;
 }
+
 footer a {
   text-decoration: none;
 }
@@ -380,13 +532,17 @@ footer a {
     display: block; 
   }
   footer nav summary { 
-    pointer-events: none; 
     cursor: default; 
     margin-bottom: .5rem; 
   }
 
   footer nav summary::after { 
     content: ""; 
-  }            
- }
+  }   
+  
+  footer img{
+    max-width: 30em;
+  }
+ }*/
+
 
