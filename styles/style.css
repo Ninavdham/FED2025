@@ -10,6 +10,8 @@
   font-display: swap;
 }
 
+
+
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -36,11 +38,17 @@
   color-scheme: light;
 }
 
+/* De custom properties heb ik helaas geen goed gebruik van gemaakt, waardoor de dark mode lastig te realiseren was. Kwam er wel na wat trial and error achter dat de custom properties uitschakelen/weghalen de oplossing was om de dark mode basis die ik nu heb in ieder geval wel te laten werken.*/
+
 :root[data-theme="dark"]{
   color: #ffffff;
-  background-color: #0f3520;
+  background-color: #0b2416;
   color-scheme: dark;
 }
+
+
+
+
 
 /****************/
 /* JOUW STYLING */
@@ -60,6 +68,61 @@ body {
   color: var(--kleur-tekst);
   background: var(--achtergrond);
 }
+
+/* Hover animaties*/ 
+section:nth-of-type(1) > section:nth-of-type(1) nav li:hover {
+  transform: translateY(-.2em)
+}
+
+nav li:hover{
+  transform: translateY(-.2em)
+}
+
+header nav ul li:nth-of-type(1):hover{
+  background-color: #c5e3be ;
+}
+
+header nav ul li:nth-of-type(2):hover{
+  background-color: #f0f0ec ;
+}
+
+header nav ul li:nth-of-type(3):hover{
+  background-color:rgb(255, 255, 146) ;
+}
+
+
+
+
+
+
+/* Focus style */
+a:focus{
+  outline: none;
+}
+
+button:focus{
+  outline: none;
+}
+
+a:focus-visible{
+  outline: 2px solid #c5e3bed7;
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+button:focus-visible{
+  outline: 2px solid #c5e3bed7;
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -154,9 +217,6 @@ header > nav a {
   border-radius: 1rem;
 }
 
-header > nav a:hover {
-  background: #f0f0f0;
-}
 
 @media (min-width: 54em) {
   header {
@@ -202,6 +262,11 @@ header > nav a:hover {
     grid-column-end: 5;
   }
 }
+
+
+
+
+
 
 
 
@@ -299,15 +364,8 @@ footer input[type="submit"]{
 	padding: 1em;
 }
 
-footer .footer-cols {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
 
-/* ===== Footer navigatie zonder classes ===== */
 
-/* dit is de wrapper van het groene blok + de foto */
 footer > section:last-of-type {
   display: grid;
   gap: 1.5rem;
@@ -319,7 +377,6 @@ footer > section:last-of-type > h2[aria-label] {
 }
 
 
-/* dit is het groene blok (de binnenste section) */
 footer > section:last-of-type > section {
   background-color: #001e07;
   color: #c5e3be;
@@ -327,7 +384,6 @@ footer > section:last-of-type > section {
   border-radius: 2rem;
 }
 
-/* titel in het groene blok */
 footer > section:last-of-type > section > h2 {
   font-size: 4rem;
   text-transform: uppercase;
@@ -336,14 +392,12 @@ footer > section:last-of-type > section > h2 {
   margin-bottom: 1.25rem;
 }
 
-/* tekst onder de titel */
 footer > section:last-of-type > section > p {
   max-width: 32rem;
   margin-bottom: 1rem;
   line-height: 1.4;
 }
 
-/* "koop je ticket" */
 footer > section:last-of-type > section > a {
   display: inline-block;
   margin-bottom: 2rem;
@@ -352,7 +406,6 @@ footer > section:last-of-type > section > a {
   font-weight: 500;
 }
 
-/* ---- accordion mobile ---- */
 footer > section:last-of-type nav details > ul {
   display: none;
   margin: 0;
@@ -391,7 +444,6 @@ footer > section:last-of-type nav a {
   font-size: .85rem;
 }
 
-/* de foto rechts */
 footer > section:last-of-type > img {
   width: 100%;
   border-radius: 1rem;
@@ -399,7 +451,7 @@ footer > section:last-of-type > img {
   object-fit: cover;
 }
 
-/* ===== groot scherm ===== */
+
 @media (min-width: 64em) {
   /* 2 kolommen: links groen, rechts foto */
   footer > section:last-of-type {
@@ -416,14 +468,12 @@ footer > section:last-of-type > img {
   }
 
 
-  /* nav in 3 kolommen */
   footer > section:last-of-type > section nav {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
   }
 
-  /* accordion-uitklap uit */
   footer > section:last-of-type nav details > ul {
     display: block;
   }
@@ -435,7 +485,6 @@ footer > section:last-of-type > img {
     content: "";
   }
 
-  /* foto even hoog/meer afgerond */
   footer > section:last-of-type > img {
     border-radius: 1.5rem;
     height: 100%;
@@ -446,103 +495,21 @@ footer > section:last-of-type > img {
 }
 
 
-
-
-
-
-/* Footer Navigatie Hulpbron ChatGPT */
-/*footer section nav {
-  display: grid;
-  gap: 1.25rem;
-  background-color: #001e07;
-  color: #c5e3be;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  border-radius: 2em;
+/* Kleur geselecteerde tekst Bron: https://stackoverflow.com/questions/10578073/changing-the-text-selection-color-using-css*/
+*::selection {
+  background: #c5e3be;;
+}
+*::-moz-selection {
+  background: #c5e3be;;
+}
+*::-webkit-selection {
+  background: #c5e3be;;
 }
 
-footer section h2{
-  font-size: 4em;
-  text-transform: uppercase;
-  font-weight: lighter;
-}
 
-footer nav details > ul {
-  display: none; 
-  margin: 0; 
-  padding: 0;
-  list-style: none;
-}
 
-footer nav details[open] > ul {
-  display: block;
-}
 
-footer nav summary{
-  list-style: none; 
-  cursor: pointer;
-  font-weight: 600;
-  padding: .5rem 0;
-}
 
-footer nav summary::-webkit-details-marker{ 
-  display: none; 
-}
 
-footer nav summary::after {
-  content: "▾";
-  float: right;
-  transition: transform .2s;
-}
-
-footer nav details[open] > summary::after {
-  transform: rotate(0deg);
-}
-
-footer img {
-  border-radius: 1rem;
-}
-
-footer ul li a {
-  color: #c5e3be;
-  list-style: none;
-  text-decoration: none;
-}
-
-footer section li {
-  list-style: none;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-footer section a {
-  color: #c5e3be;
-  font-size: .8em;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-@media (min-width: 64em) {
-  footer nav { 
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
-  }
-  footer nav details > ul { 
-    display: block; 
-  }
-  footer nav summary { 
-    cursor: default; 
-    margin-bottom: .5rem; 
-  }
-
-  footer nav summary::after { 
-    content: ""; 
-  }   
-  
-  footer img{
-    max-width: 30em;
-  }
- }*/
 
 

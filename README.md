@@ -75,13 +75,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdownschets.png" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -95,7 +90,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik ben al goed op weg met de html, maar ik heb twijfels over de structuur van de navigatie en de secties, waar een sectie begint en eindigt enzo.
 
 
   ### Agenda voor meeting
@@ -132,7 +127,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  De html staat, maar nu begint de css, ik merk dat ik hier direct weer moeite mee heb, moet weer ven inkomen volgens mij.
 
 
   ### Agenda voor meeting
@@ -186,11 +181,28 @@ content: url
 
 ## Toegankelijkheidstest 2/2 (week 4)
 
-<details>
+<details open>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Content: De gebruikte teksten, knoppen, linken etc. zijn uniek en duidelijk.
+
+  Keyboard: Er is een duidelijk zichtbare focus style tijdens het navigeren met het toetsenbord, ik heb een style toegevoegd die overeenkomt met de stijl van de website. Soms komt de volgorde niet helemaal overeen met de visuele lay-out door de afwisseling op de verschillende schermgroottes. 
+  <img src="readme-images/focusstyle.png" width="375px" alt="focus style">
+
+  Mobile and touch: De mobiele ervaring van de website is prima, geen bijzondere opmerkingen.
+
+  Headings: De headings in de website kloppen, één h1 per pagina, logische volgorde en geen overgeslagen headings.
+
+  Lists: Voor lijsten heb ik gebruik gemaakt van de juiste elementen.
+
+  Images: Alle foto's hebben een alt attribute (een beschrijving van de foto's) en de decoratieve foto's hebben een null alt.
+
+  Appearance: De originele website heeft geen dark mode functie, en deze heb ik wel toegevoegd, maar doordat ik helaas niet echt goed gebruik heb gemaakt van de custom properties, was dit lastig, heb de basis die werkt (kleur van tekst en achtergrond), maar zeker niet voldoende voor echte toegankelijkheid.
+
+  Animation: Bij de animaties die Artis gebruikt voor de navigatie links viel het me op dat ze een beetje trippend zijn, niet echt toegankelijk, dus heb ik gekozen om deze animaties wat rustiger te maken, een subtiele beweging naar boven, duidelijk, maar ook niet overdreven.   
+
 
 </details>
 
@@ -204,7 +216,7 @@ content: url
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  De website komt goed bij elkaar, heb wel nog moeite met bepaalde secties en responsivenes. De carousel werkt niet bijvoorbeeld, en veel secties moet nog een @media aan toegevoegd worden, moet nog even uitvinden hoe ik dit het mooiste het handigste kan doen.
 
 
   ### Agenda voor meeting
@@ -222,8 +234,7 @@ content: url
 
   - flex-shrink:0; niet krimpen. parent scroll-snap-type:, child scroll-snap-align 
   - font:inherit; border-bottom: solid 1px currentcolor;
-  - nog een punt
-  - ...
+  
 
 </details>
 
@@ -233,23 +244,24 @@ content: url
 
 ## Eindgesprek (week 5)
 
-<details>
+<details open>
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ResultaatHomepagina.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Iets wat ik heb geleerd en heel blij mee ben dat het is gelukt is het toevoegen van het lettertype, voelt origineel dat als iets dat niet heel belangrijk is, maar als het dan gelukt is voelt het toch direct een stuk mooier en professioneler. Door de toevoeging van het lettertype kon ik ook veel svg's die ik gebruikte weghalen en vervangen door headings, direct wat overzichtelijker en netter! 
+  <img src="readme-images/font.png" width="375px" alt="top">
+  <img src="readme-images/fontcode.png" width="375px" alt="top">
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
+  Waar ik ook trots op ben is de carousel, het is me gelukt om alle verschillende inhoud erin te krijgen, op de juiste plek met een werkende carousel en ook nog met knoppen erbij, links en rechts in het midden van de carousel, anders dan op de orginele website waar de knoppen onder de carousel zitten, als je niet ver genoeg scrolled kun je ze niet zien, dus daarom vond ik dit wel een wat mooiere plek. Helaas doet de code wel een beetje gek, er worden fout meldingen gegeven, maar de code doet het wel gewoon, de foutmeldingen lijken te komen door nog onbekende/nieuwe features!
+  <img src="readme-images/caroussel.png" width="375px" alt="top"> 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  De form in de footer responsive maken is helaas (nog) niet gelukt. Dit was lastig door de specifieke elementen die gebruikt worden in het formulier, ben wel trots dat het formulier zelf wel gelukt is om te coderen!
+  <img src="readme-images/bummer1.png" width="375px" alt="bummer">
 </details>
 
 
@@ -265,8 +277,12 @@ content: url
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron gebruikt voor tabel tweede pagina https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table
-  2. bron gebruikt voor formulier in footer https://www.w3schools.com/css/tryit.asp?filename=trycss_forms
-  3. ...
+  1. Bron gebruikt voor tabel tweede pagina https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table
+  2. Bron gebruikt voor formulier in footer https://www.w3schools.com/css/tryit.asp?filename=trycss_forms
+  3. Kleur geselecteerde tekst Bron: https://stackoverflow.com/questions/10578073/changing-the-text-selection-color-using-css
+  4. Formulier Hulpbron ChatGPT en Sanne (3de voortgangsgesprek) 
+  5. Bron tekst outline headings carousel: https://stackoverflow.com/questions/4919076/outline-effect-to-text
+  6. Bron inverted headings carousel: https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert
+  7. Knoppen carousel bron:  https://chrome.dev/carousel-configurator/ (Sanne 3de voortgangsgesprek
 
 </details>

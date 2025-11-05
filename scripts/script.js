@@ -34,11 +34,11 @@ if (btn) {
 }
 
 
-/* Functie openen footer navigatie (Bedankt Sanne*/
+/* Functie openen footer navigatie (Bedankt Sanne!) */
 function checkDetails() {
     const deDetails = document.querySelectorAll("details");
 
-    if (window.innerWidth > 800) {    
+    if (window.innerWidth > 1000) {    
         deDetails.forEach(eenDetails => {
             eenDetails.setAttribute("open", true);
         });

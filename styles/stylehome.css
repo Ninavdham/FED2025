@@ -2,13 +2,11 @@
 /* CSS HOME PAGINA*/
 /******************/
 
-/* ===== hero / hoofd-navigatie ===== */
-
-/* buitenste sectie met groen + foto */
+/* main navigatie */
 section:nth-of-type(1) {
   display: grid;
   gap: 1rem;
-  margin: .5rem;
+  margin: 0rem;
 }
 
 section:nth-of-type(1) > h1[aria-label],
@@ -17,7 +15,6 @@ section:nth-of-type(1) > section > h2[aria-label] {
 }
 
 
-/* het groene blok (eerste section erin) */
 section:nth-of-type(1) > section:nth-of-type(1) {
   background-color: #001e07;
   color: #c5e3be;
@@ -25,7 +22,6 @@ section:nth-of-type(1) > section:nth-of-type(1) {
   border-radius: 2rem;
 }
 
-/* grote titel */
 section:nth-of-type(1) > section:nth-of-type(1) > h1 {
   font-size: 4rem;
   text-transform: uppercase;
@@ -34,44 +30,38 @@ section:nth-of-type(1) > section:nth-of-type(1) > h1 {
   margin-bottom: 1.5rem;
 }
 
-/* lijst zelf: kolom, geen gaps (want we doen borders) */
 section:nth-of-type(1) > section:nth-of-type(1) nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* elk li = één rij: icoon - tekst - pijltje */
 section:nth-of-type(1) > section:nth-of-type(1) nav li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  font-size: 2em;
   gap: .75rem;
   padding: 1.15rem 0;
   border-bottom: 1px solid rgba(197, 227, 190, .1);
 }
 
-/* link binnen li: tekst + eerste icoon op 1 lijn */
 section:nth-of-type(1) > section:nth-of-type(1) nav li > a {
   display: flex;
   align-items: center;
   gap: .65rem;
   color: #c5e3be;
   text-decoration: none;
-  flex: 1 1 auto;              /* zodat de pijltjes rechts kunnen staan */
+  flex: 1 1 auto;              
 }
 
-/* eerste svg (icoon) mag niet uitrekken */
 section:nth-of-type(1) > section:nth-of-type(1) nav li > a svg:first-of-type {
   flex: 0 0 auto;
 }
 
-/* het pijltje helemaal rechts (tweede svg, buiten de <a>) */
 section:nth-of-type(1) > section:nth-of-type(1) nav li svg:last-of-type {
   flex: 0 0 auto;
 }
 
-/* IMAGE / VIDEO rechts */
 section:nth-of-type(1) > section:nth-of-type(2) img {
   width: 100%;
   display: block;
@@ -79,103 +69,40 @@ section:nth-of-type(1) > section:nth-of-type(2) img {
   object-fit: cover;
 }
 
-/* ===== groot scherm ===== */
+
+
 @media (min-width: 70em) {
-  /* 2 kolommen naast elkaar, geen space-evenly meer */
   section:nth-of-type(1) {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 1rem;
-    align-items: stretch;
   }
 
-  /* groene blok mag volle hoogte pakken */
   section:nth-of-type(1) > section:nth-of-type(1) {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  /* foto even hoog als groen blok */
   section:nth-of-type(1) > section:nth-of-type(2) img {
     height: 100%;
-    object-fit: cover;
+    grid-column: 2;
   }
 }
 
 
-/* main navigatie */
-/*section:nth-of-type(1) {
-  display: flex;
-  flex-direction: column;
-  gap: .8rem;
-  margin: .5rem;
-}
-
-
-section:nth-of-type(1) section:nth-of-type(1) {
-  background-color: #001e07;
-  color: #c5e3be;
-  padding: 2.5em;
-  padding-bottom: 4.5em;
-  border-radius: 2em;
-}
-
-section:nth-of-type(1) section:nth-of-type(1) h1 {
-  font-size: 4em;
-  text-transform: uppercase;
-  font-weight: lighter;
-}
-
-section:nth-of-type(1) section:nth-of-type(1) li svg  {
-  vertical-align: middle;
-}
-
-section:nth-of-type(1) section:nth-of-type(1) ul li svg:nth-of-type(2)  {
-  justify-self: flex-end;
-}
-
-section:nth-of-type(1) section:nth-of-type(1) li {
-  font-size: 1.2em;
-  color: #c5e3be;
-  text-decoration: none;
-  padding-top: 1.5em;
-  list-style: none;
-  padding-top: 1.5em;
-}
-
-section:nth-of-type(1) section:nth-of-type(1) a {
-  color: #c5e3be;
-}
-
-section:nth-of-type(1) section:nth-of-type(2) img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-main section nav ul a {
-  color: white;
-  text-decoration: none;
-}
-
-@media (min-width: 70em) {
-  section:nth-of-type(1) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  section:nth-of-type(1) section:nth-of-type(1) {
-    display: flex;
-    flex-direction: column;
-  }
-}*/
 
 
 
 
-/* carousel/eerste section */
+
+
+
+
+
+/* carousel */
+/*knoppen bron:  https://chrome.dev/carousel-configurator/ (Sanne derde voortgangsgesprek)
+Helaas nog wat foutmeldingen door onbekende/nieuwe features*/
 section:nth-of-type(2) ul:nth-of-type(1) {
   display: flex;
   gap: 1rem;
@@ -187,9 +114,39 @@ section:nth-of-type(2) ul:nth-of-type(1) {
 
 section:nth-of-type(2) ul {
   background-color: #f0f0ec;
+  color: black;
   border-radius: 2em;
   margin-top: 2rem;
+  position: relative;
+  anchor-name: --carousel;
+  scroll-snap-type: x mandatory;
 }
+
+/* generieke scroll-knoppen */
+section:nth-of-type(2) ul::scroll-button(*) {
+  position: fixed;                 
+  position-anchor: --carousel;
+  position-visibility: always;    
+  font-family: "Omnes";
+  margin-top: 1em;
+  height: 2em;
+}
+
+section:nth-of-type(2) ul::scroll-button(right) {
+  position-area: center;
+  content: '→' / 'Next';
+  justify-self: end;
+}
+
+section:nth-of-type(2) ul::scroll-button(left) {
+  position-area: center;
+  content: '←' / 'Previous';
+  justify-self: start;
+}
+
+
+
+
 
 section:nth-of-type(2) img {
   width: 100%;
@@ -209,7 +166,7 @@ section:nth-of-type(2) h2 {
   font-weight: 500; 
   max-width: 5em;    
   color: white;
-  -webkit-text-stroke: 2px black;     
+  -webkit-text-stroke: 2px black; /* Bron: https://stackoverflow.com/questions/4919076/outline-effect-to-text  */   
 }
 
 section:nth-of-type(2) p {
@@ -258,6 +215,10 @@ section:nth-of-type(2) li:nth-of-type(3) {
   color: white;
 }
 
+section:nth-of-type(2) li:nth-of-type(3) h2{
+  filter: invert(1); /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert */
+}
+
 section:nth-of-type(2) li:nth-of-type(3) a {
   color: white;
 }
@@ -269,8 +230,21 @@ section ul:nth-of-type(3) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* hier, in het hart van Amsterdam...*/
 section:nth-of-type(3){
+  display: flex;
+  flex-direction: column;
   margin-top: 2em;
   margin-bottom: 2em;
   padding: 1em;
@@ -299,17 +273,84 @@ section:nth-of-type(3) p{
 }
 
 section:nth-of-type(3) a{
-    color: black;
-    text-decoration: none;
-    margin-bottom: 4em;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 4em;
 }
 
 
 @media (min-width: 54em){
+  section:nth-of-type(3) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
   section:nth-of-type(3) h2{
+    grid-column-start: 1;
+    grid-column-end: 3;
     font-size: 3.5;
   }
+
+  section:nth-of-type(3) h3{
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  section:nth-of-type(3) p{
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  section:nth-of-type(3) a{
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
 }
+
+
+
+@media (min-width: 64em){
+  section:nth-of-type(3) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5em 4em 5em;
+  }
+
+  section:nth-of-type(3) h2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 2.5em;
+  }
+
+  section:nth-of-type(3) h3{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+  }
+
+  section:nth-of-type(3) p{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+  }
+
+  section:nth-of-type(3) a{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 5;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -374,15 +415,31 @@ section:nth-of-type(4) a {
   section:nth-of-type(4){
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     gap: 2rem;
     padding: 3rem;
-    /* border-radius: 2.5rem; */
+    border-radius: 2.5rem;
   }
 
   section:nth-of-type(4) h2, section:nth-of-type(4) p, section:nth-of-type(4) a {
     grid-column: 1;
     order: 0;
+  }
+
+  section:nth-of-type(4) h2 {
+    grid-row-start: 1;
+    font-size: 2.5em;
+  }
+
+  section:nth-of-type(4) p {
+    grid-row-start: 2;
+    font-size: 1.5em;
+  }
+
+  section:nth-of-type(4) a {
+    grid-row-start: 3;
+    font-size: 1em;
   }
 
   section:nth-of-type(4) > h2 {
@@ -410,6 +467,15 @@ section:nth-of-type(4) a {
   }
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -484,20 +550,22 @@ main section:nth-of-type(5) ul:nth-of-type(1) {
 
   section:nth-of-type(5){
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     gap: 2rem;
     padding: 3rem;
-    /* border-radius: 2.5rem; */
+    border-radius: 2.5rem;
   }
 
-  section:nth-of-type(5) h2, section:nth-of-type(4) p, section:nth-of-type(4) a {
-    grid-column: 1;
+  section:nth-of-type(5) h2, section:nth-of-type(5) p, section:nth-of-type(5) a {
+    grid-column: 2;
     order: 0;
   }
 
   section:nth-of-type(5) > h2 {
     margin-bottom: 1.25rem;
+    font-size: 2.5em;
   }
 
   section:nth-of-type(5) > p {
@@ -513,7 +581,7 @@ main section:nth-of-type(5) ul:nth-of-type(1) {
 
   section:nth-of-type(5) img {
     order: 0;
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1 / -1;
     height: 100%;
     width: 100%;
@@ -522,11 +590,33 @@ main section:nth-of-type(5) ul:nth-of-type(1) {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+/*Decoratieve foto heimanseik */
 figure img {
   width: 100%;
   border-radius: 2em;
   margin: .5em;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Aantallen */
 section:nth-of-type(6) ul {
@@ -550,6 +640,7 @@ section:nth-of-type(6) h3 {
   section:nth-of-type(6) ul {
     display: flex;
     flex-direction: row;
+    justify-content:space-between;
     gap: 1em;
   }
 
@@ -562,3 +653,8 @@ section:nth-of-type(6) h3 {
     font-size: 2em;
   }
 }
+
+
+
+
+
